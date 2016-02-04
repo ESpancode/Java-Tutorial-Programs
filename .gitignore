@@ -1,12 +1,98 @@
-*.class
+First Program
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+/*My First Program in Java*/
 
-# Package Files #
-*.jar
-*.war
-*.ear
+class Greeting {
+public static void main (String[] args) {
+String greeting = " Hello, Salute, Guten Tag, Ni Hao, Hola, Susrekal, Ciao!";
+System.out.println(greeting);
+}
+}
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-hs_err_pid*
+/*End Result: All of the greetings above should appear*/
+/*All data will be complied and shown on screen based on the ide and compiler*/
+
+
+Objects and Classes
+
+public class ObjectsClasses {
+
+// First the creation of a class
+// This is linked to a Person
+//http://www.tutorialspoint.com/java/java_object_classes.htm
+
+public class person{
+int personAge; //Declaring person's ages as a number
+public person(String name){
+
+// This constructor that is created before an object
+// Constructor has one parameter, name
+
+System.out.println("This Persons Name is :" + name );
+}
+
+public void setAge( int age ){
+personAge = age;
+}
+
+public int getAge( ){
+System.out.println("Person's age is :" + personAge );
+return personAge;
+}
+
+public void main (String []args){
+
+//Object creation takes place here
+person myPerson = new person( "Francois Jean-Luc Singh Jamal" );
+
+// Call class method to set Person's age
+myPerson.setAge( 21 );
+
+// Call another class method to get Person's age
+myPerson.getAge( );
+
+// accessing instance variable as shown below
+System.out.println("Variable Value :" + myPerson.personAge );
+}
+}
+}
+
+Strings
+
+public class Strings {
+//This program is the use of strings in Java
+//First, the creation of strings
+//References from http://www.tutorialspoint.com/java/java_strings.htm
+
+public class CreateString{
+
+public void main(String args[]){
+char[] StarArray = { 'S', 'T', 'A', 'R'}; //Breaking down each letter in Array
+String starString = new String(StarArray); //Creating a String with the Array
+System.out.println( starString ); //Printing out Array into String
+}
+
+//Output = STAR
+}
+
+//Now to calculate the string length
+//This would be due to the amount of words/letters used in string
+//Amount of letter/words would the String Length
+
+public static void main(String args[]) {
+String StringLen = "Captain Kirk Vs Khan Noonien Singh"; //String that is declared
+int len = StringLen.length(); //The string length would be calculated
+System.out.println( "String Length is : " + len );
+}
+// Output: 34
+//Finally the Concatenation of Strings
+//This would be the break down of each section of string
+
+public class IntoDarkness {
+public void main(String args[]) {
+String string1 = "Captain Vs Khan Noonien";
+System.out.println("Kirk " + string1 + "Singh");
+//Output: Kirk Captain Vs Khan Noonien Singh
+}
+}
+}
